@@ -10,46 +10,91 @@
 			crossorigin="anonymous"
 		/>
 		<script src="/socket.io/socket.io.js"></script>
-		<title>hb</title>
+		<title>chat</title>
 	</head>
 	<body>
-		<form id="formulario">
-			<div class="mb-3">
-				<label class="form-label">Title</label>
-				<input class="form-control" name="title" id="title" required />
+		<div class="container" id="messageForm">
+			<div class="row">
+				<div class="col">NEW USER</div>
 			</div>
-			<div class="mb-3">
-				<label class="form-label">Price</label>
-				<input class="form-control" name="price" id="price" required />
+			<div class="row">
+				<div class="mb-3">
+					<div class="input-group">
+						<span class="input-group-text">First and last name</span>
+						<input
+							type="text"
+							aria-label="First name"
+							id="name"
+							class="form-control"
+						/>
+						<input
+							type="text"
+							aria-label="Last name"
+							id="lastName"
+							class="form-control"
+						/>
+					</div>
+				</div>
 			</div>
-			<div class="mb-3">
-				<label class="form-label">URL</label>
-				<input class="form-control" name="thumbnail" id="thumbnail" required />
+			<div class="row">
+				<div class="col">
+					<div class="mb-3">
+						<label for="exampleInputEmail1" class="form-label"
+							>Email address</label
+						>
+						<input
+							type="email"
+							class="form-control"
+							id="email"
+							aria-describedby="emailHelp"
+						/>
+						<div id="emailHelp" class="form-text"></div>
+					</div>
+					<div class="mb-3">
+						<label for="exampleInputEmail1" class="form-label">Alias</label>
+						<input
+							type="email"
+							class="form-control"
+							id="alias"
+							aria-describedby="emailHelp"
+						/>
+						<div id="emailHelp" class="form-text"></div>
+					</div>
+					<div class="mb-3">
+						<label for="exampleInputEmail1" class="form-label">Avatar</label>
+						<input
+							type="email"
+							class="form-control"
+							id="avatar"
+							aria-describedby="emailHelp"
+						/>
+						<div id="emailHelp" class="form-text"></div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="col-auto">
+						<label for="exampleInputEmail1" class="form-label">Age</label>
+						<label for="inputPassword2" class="visually-hidden">Age</label>
+						<input type="" class="form-control" id="age" placeholder="" />
+					</div>
+					<div class="mb-3">
+						<label for="exampleFormControlTextarea1" class="form-label"
+							>Example textarea</label
+						>
+						<textarea class="form-control" id="text" rows="3"></textarea>
+					</div>
+					<input class="btn btn-primary" type="submit" value="Submit" />
+				</div>
 			</div>
-			<button type="submit" class="btn btn-primary">Submit</button>
-		</form>
-		<table class="table">
-			<thead>
-				<tr>
-					<th scope="col">productos disponibles</th>
-				</tr>
-			</thead>
-			<tbody id="productsTable"></tbody>
-		</table>
-		<form id="messageForm">
-			<div class="mb-3">
-				<label for="exampleInputEmail1" class="form-label">Usuario:</label>
-				<input id="user" />
-			</div>
-			<div class="mb-3" id="messageForm">
-				<label for="exampleInputPassword1" class="form-label">mensaje:</label>
-				<input placeholder="Escribí un mensaje..." id="msg" />
-				<button type="submit" id="send" class="btn btn-success">Submit</button>
-			</div>
-		</form>
-
+		</div>
 		<div id="mensajes"></div>
-
-		<script src="js/sockets.js"></script>
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="/public/js/chat.js"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"
+			integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
 	</body>
 </html>
