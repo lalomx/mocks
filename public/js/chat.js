@@ -8,17 +8,21 @@ const age = document.getElementById("age");
 const text = document.getElementById("text");
 const messageForm = document.getElementById("messageForm");
 
+const user = {};
+const users = [];
 messageForm.addEventListener("submit", (e) => {
 	e.preventDefault();
 
 	const msg = {
-		user: user.uuid.v4(),
-		name: firstname.value,
-		lastName: lastName.value,
-		email: email.value,
-		alias: alias.value,
-		avatar: avatar.value,
-		age: age.value,
+		author: {
+			user: user.uuid.v4(),
+			name: firstname.value,
+			lastName: lastName.value,
+			email: email.value,
+			alias: alias.value,
+			avatar: avatar.value,
+			age: age.value,
+		},
 		text: text.value,
 	};
 
