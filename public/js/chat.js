@@ -7,15 +7,15 @@ const avatar = document.getElementById("avatar");
 const age = document.getElementById("age");
 const text = document.getElementById("text");
 const messageForm = document.getElementById("messageForm");
+const button = document.getElementById("button");
 
 const user = {};
 const users = [];
-messageForm.addEventListener("submit", (e) => {
+messageForm.addEventListener("sumbit", (e) => {
 	e.preventDefault();
 
 	const msg = {
 		author: {
-			user: user.uuid.v4(),
 			name: firstname.value,
 			lastName: lastName.value,
 			email: email.value,
